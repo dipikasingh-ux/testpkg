@@ -1,0 +1,357 @@
+ {
+
+
+  "name": "whatuni-review-web-app",
+
+
+  "version": "0.0.0",
+
+
+  "scripts": {
+
+
+	"ng": "ng",
+
+
+	"start:dev": "ng serve -c=dev",
+
+
+	"start:test": "ng serve -c=test",
+
+
+	"start:live": "ng serve -c=production",
+
+
+	"build:dev": "ng build --prod --c dev",
+
+
+	"build:test": "ng build --prod --c test",
+
+
+	"build:live": "ng build --prod --c production",
+
+
+	"lint-test": "ng lint",
+
+
+	"e2e": "ng e2e",
+
+
+	"compile:server": "webpack --config webpack.server.config.js --progress",
+
+
+	"dev:ssr": "ng run whatuni-review-web-app:serve-ssr",
+
+
+	"serve:ssr": "node dist/whatuni-review-web-app/server/main.js",
+
+
+	"prerender": "ng run whatuni-review-web-app:prerender",
+
+
+	"lint": "eslint -f html -o ./reports/eslint-report.html --color ./",
+
+
+	"lint:dev": "eslint -f html -o ./reports/eslint-reporzt.html --color ./ --plugin file-progress --rule \"file-progress/activate: 1\"",
+
+
+	"lint:fix": "eslint --fix ./",
+
+
+	"test": "jest",
+
+
+	"test:watch": "jest --watch",
+
+
+	"test:coverage": "jest --coverage",
+
+
+	"build:dev:browser:ssr": "ng build --base-href /university-reviews --deploy-url /university-reviews/ --c dev",
+
+
+	"build:dev:server:ssr": "ng run whatuni-review-web-app:serverless:dev",
+
+
+	"build:dev:ssr": "npm run build:dev:browser:ssr && npm run build:dev:server:ssr",
+
+
+	"build:test:browser:ssr": "ng build --base-href /university-reviews --deploy-url /university-reviews/ --c test",
+
+
+	"build:test:server:ssr": "ng run whatuni-review-web-app:serverless:test",
+
+
+	"build:test:ssr": "npm run build:test:browser:ssr && npm run build:test:server:ssr",
+
+
+	"build:browser:ssr": "ng build --base-href /university-reviews --deploy-url /university-reviews/ --c production",
+
+
+	"build:server:ssr": "ng run whatuni-review-web-app:serverless:production",
+
+
+	"build:ssr": "npm run build:browser:ssr && npm run build:server:ssr",
+
+
+	"build:dev:browser:serverless": "ng build --base-href /university-reviews --deploy-url /university-reviews/ --c dev",
+
+
+	"build:dev:server:serverless": "ng run whatuni-review-web-app:serverless:dev",
+
+
+	"build:dev:serverless": "npm run build:dev:browser:serverless && npm run build:dev:server:serverless",
+
+
+	"build:test:browser:serverless": "ng build --base-href /university-reviews --deploy-url /university-reviews/ --c test",
+
+
+	"build:test:server:serverless": "ng run whatuni-review-web-app:serverless:test",
+
+
+	"build:test:serverless": "npm run build:test:browser:serverless && npm run build:test:server:serverless",
+
+
+	"build:browser:serverless": "ng build --base-href /university-reviews --deploy-url /university-reviews/ --c production",
+
+
+	"build:server:serverless": "ng run whatuni-review-web-app:serverless:production",
+
+
+	"build:serverless": "npm run build:browser:serverless && npm run build:server:serverless",
+
+
+	"deploy:serverless": "serverless deploy",
+
+
+	"build:deploy:serverless": "npm run build:serverless && npm run deploy",
+
+
+	"build:client-and-server-bundles": "ng build --prod && ng run whatuni-review-web-app:server:production --bundleDependencies all",
+
+
+	"serve:serverless": "serverless offline start"
+
+
+  },
+
+
+  "private": true,
+
+
+  "dependencies": {
+
+
+	"@angular-eslint/schematics": "^16.0.3",
+
+
+	"@angular/animations": "~13.4.0",
+
+
+	"@angular/cdk": "^13.0.2",
+
+
+	"@angular/common": "~13.4.0",
+
+
+	"@angular/compiler": "~13.4.0",
+
+
+	"@angular/core": "~13.4.0",
+
+
+	"@angular/forms": "~13.4.0",
+
+
+	"@angular/localize": "^16.1.1",
+
+
+	"@angular/material": "^13.0.1",
+
+
+	"@angular/material-moment-adapter": "^13.2.1",
+
+
+	"@angular/platform-browser": "~13.4.0",
+
+
+	"@angular/platform-browser-dynamic": "~13.4.0",
+
+
+	"@angular/platform-server": "~13.4.0",
+
+
+	"@angular/router": "~13.4.0",
+
+
+	"@aws-cdk/aws-lambda-nodejs": "^1.204.0",
+
+
+	"@contentful/rich-text-html-renderer": "^14.1.1",
+
+
+	"@ng-bootstrap/ng-bootstrap": "^15.0.1",
+
+
+	"@ng-toolkit/serverless": "^8.1.0",
+
+
+	"@ng-toolkit/universal": "^7.1.1",
+
+
+	"@nguniversal/express-engine": "^12.1.1",
+
+
+	"@nguniversal/module-map-ngfactory-loader": "^8.2.6",
+
+
+	"angular-ng-stepper": "^1.0.6",
+
+
+	"angulartics2": "^10.0.0",
+
+
+	"aws-serverless-express": "^3.4.0",
+
+
+	"domino": "^2.1.6",
+
+
+	"ejs": "^3.1.6",
+
+
+	"express": "^4.15.2",
+
+
+	"fs": "^0.0.1-security",
+
+
+	"js-cookie": "^3.0.1",
+
+
+	"moment": "^2.29.1",
+
+
+	"ng-qrcode": "^6.0.0",
+
+
+	"ngx-device-detector": "^3.0.0",
+
+
+	"ngx-image-compress": "^11.0.3",
+
+
+	"path": "^0.12.7",
+
+
+	"request-ip": "^2.1.3",
+
+
+	"reviews": "file:sharedlib/reviews-0.0.1.tgz",
+
+
+	"rxjs": "~6.6.0",
+
+
+	"rxjs-compat": "^6.6.7",
+
+
+	"serverless-associate-waf": "^1.2.1",
+
+
+	"ts-loader": "^9.4.3",
+
+
+	"tslib": "^2.3.0",
+
+
+	"zone.js": "~0.11.4"
+
+
+  },
+
+
+  "devDependencies": {
+
+
+	"@angular-devkit/build-angular": "~13.3.11",
+
+
+	"@angular/cli": "~13.3.11",
+
+
+	"@angular/compiler-cli": "~13.4.0",
+
+
+	"@nguniversal/builders": "^12.1.1",
+
+
+	"@types/express": "^4.17.0",
+
+
+	"@types/jest": "^29.5.2",
+
+
+	"@types/node": "^12.11.1",
+
+
+	"@typescript-eslint/eslint-plugin": "^5.59.9",
+
+
+	"eslint": "^8.42.0",
+
+
+	"eslint-config-standard-with-typescript": "^35.0.0",
+
+
+	"eslint-plugin-import": "^2.27.5",
+
+
+	"eslint-plugin-n": "^15.7.0",
+
+
+	"eslint-plugin-promise": "^6.1.1",
+
+
+	"jasmine-core": "~3.8.0",
+
+
+	"jest": "^29.5.0",
+
+
+	"jest-preset-angular": "^13.1.1",
+
+
+	"localstorage-polyfill": "^1.0.1",
+
+
+	"raw-loader": "^4.0.2",
+
+
+	"serverless": "^3.32.0",
+
+
+	"serverless-api-compression": "^1.0.1",
+
+
+	"serverless-apigw-binary": "^0.4.4",
+
+
+	"serverless-offline": "^12.0.4",
+
+
+	"typescript": "~4.6.4",
+
+
+	"webpack": "^5.0.0",
+
+
+	"webpack-cli": "^4.7.2"
+
+
+
+  }
+
+
+}
+
