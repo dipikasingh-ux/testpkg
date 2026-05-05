@@ -157,7 +157,7 @@
 	"@angular/compiler": "~13.4.0",
 
 
-	"@angular/core": "~13.4.0",
+	"@angular/core": "~19.2.19",
 
 
 	"@angular/forms": "~13.4.0",
