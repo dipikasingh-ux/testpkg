@@ -199,7 +199,7 @@
 	"@ng-toolkit/universal": "^7.1.1",
 
 
-	"@nguniversal/express-engine": "^12.1.1",
+	"@nguniversal/express-engine": "^13.0.0",
 
 
 	"@nguniversal/module-map-ngfactory-loader": "^8.2.6",
