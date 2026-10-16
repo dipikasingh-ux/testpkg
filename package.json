@@ -142,7 +142,7 @@
   "dependencies": {
 
 
-	"@angular-eslint/schematics": "^16.0.3",
+	"@angular-eslint/schematics": "^18.0.0",
 
 
 	"@angular/animations": "~13.4.0",
