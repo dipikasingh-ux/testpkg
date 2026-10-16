@@ -151,7 +151,7 @@
 	"@angular/cdk": "^13.0.2",
 
 
-	"@angular/common": "~13.4.0",
+	"@angular/common": "~20.3.27",
 
 
 	"@angular/compiler": "~13.4.0",
